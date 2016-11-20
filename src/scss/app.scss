@@ -1,3 +1,14 @@
+@import './vars';
+@import './mixin';
+@import './normalize';
+@import './fonts';
+
 html {
-  margin: 10px;
+
+  body {
+
+    font-size: $base-font-size;
+    font-family: $font_RG;
+  }
+
 }

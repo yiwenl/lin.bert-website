@@ -37,15 +37,24 @@ module.exports = {
       query: {
         "presets": ["react", "es2015", "stage-0", "react-hmre"]
       }
-    }, {
-        test: /\.jpe?g$|\.gif$|\.png$/i,
-        loader: 'file'
-    },{
+    },
+    {
+      test: /\.jpe?g$|\.gif$|\.png$/i,
+      loader: 'file'
+    },
+    {
       test: /\.json?$/,
       loader: 'json'
-    },{
+    },
+    {
       test: /\.scss$/,
       loaders: ["style", "css?sourceMap", "sass?sourceMap"]
-    }]
+    },
+    { test: /\.svg$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=src/fonts/[name].[ext]' },
+    { test: /\.woff$/, loader: 'url?limit=65000&mimetype=application/font-woff&name=src/fonts/[name].[ext]' },
+    { test: /\.woff2$/, loader: 'url?limit=65000&mimetype=application/font-woff2&name=src/fonts/[name].[ext]' },
+    { test: /\.otf$/, loader: 'url?limit=65000&mimetype=application/octet-stream&name=src/fonts/[name].[ext]' },
+    { test: /\.eot$/, loader: 'url?limit=65000&mimetype=application/vnd.ms-fontobject&name=src/fonts/[name].[ext]' }
+    ]
   }
 };
