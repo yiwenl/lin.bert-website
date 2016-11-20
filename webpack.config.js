@@ -29,6 +29,9 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('development')
     })
   ],
+  resolve: {
+      extensions: ['', '.js', '.jsx', '.json']
+  },
   module: {
     loaders: [{
       test: /\.jsx?$/,

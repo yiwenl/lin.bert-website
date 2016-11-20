@@ -1,0 +1,46 @@
+$headerM: 40px;
+$headerD: $headerM * 4;
+
+header {
+
+  height: $headerM;
+
+  .row,.column {
+    height: $headerM;
+  }
+
+  .column {
+    display: table;;
+  }
+
+  p {
+
+    &.title {
+
+      position: relative;
+      width: auto;
+      line-height: 30px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        @include size(24px,30px);
+        left: -5px;
+        background-color: $COLOR_PINK;
+        z-index: -1;
+      }
+    }
+  }
+
+  @include MediaQuery($MEDIA_Tablet) {
+
+    height: $headerD;
+
+    .row,.column {
+      height: $headerD;
+    }
+
+  }
+}
+
+@import './nav';

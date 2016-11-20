@@ -1,3 +1,19 @@
-$font_BD:       'gt_walsheimbold',sans-serif;
-$font_MD:       'gt_walsheimmedium',sans-serif;
-$font_RG:       'gt_walsheimregular',sans-serif;
+$COLOR_PINK:                #ff9981;
+
+$MEDIA_Smartphone:          'smartphone';
+$MEDIA_Tablet:              'tablet';
+$MEDIA_DesktopBase:         'desktop-small';
+$MEDIA_DesktopWide:         'desktop-wide';
+
+$MEDIA_Smartphone_Width:    767px;
+$MEDIA_Tablet_Width:        768px;
+$MEDIA_DesktopBase_Width:   992px;
+$MEDIA_DesktopWide_Width:   1200px;
+
+$EASE_Ease:                 ease;
+$EASE_BEZIER_Out:           cubic-bezier(.19,.5,.46,.88);
+$EASE_BEZIER_InOut:         cubic-bezier(.77,0,.175,1);
+
+$font_BD:                   'gt_walsheimbold',sans-serif;
+$font_MD:                   'gt_walsheimmedium',sans-serif;
+$font_RG:                   'gt_walsheimregular',sans-serif;

@@ -1,0 +1,31 @@
+nav {
+
+  ul {
+
+    margin: 0;
+    list-style: none;
+
+    li {
+
+      display: block;
+
+      a {
+
+        width: auto;
+        @include Transition(color,.15s);
+        line-height: 30px;
+
+        &:not(.disabled) {
+          cursor: pointer;
+        }
+
+        &:hover {
+          color: $COLOR_PINK;
+        }
+
+      }
+
+
+    }
+  }
+}

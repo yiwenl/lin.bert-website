@@ -707,3 +707,33 @@ $base-font-size: 16px !default;
 
   @include prefix(animation, slide-in-#{$slide-axis}-#{$slide-offset} $animation-properties, 'webkit');
 }
+
+@mixin MediaQuery($media:$MEDIA_Tablet) {
+
+    @if $media == $MEDIA_Tablet {
+
+        @media only screen and (min-width: $MEDIA_Tablet_Width) { @content; }
+    }
+    @else if $media == $MEDIA_DesktopBase {
+
+        @media only screen and (min-width: $MEDIA_DesktopBase_Width)  { @content; }
+
+    }
+    @else if $media == $MEDIA_DesktopWide {
+
+        @media only screen and (min-width: $MEDIA_DesktopWide_Width)  { @content; }
+
+    }
+    @else if $media == $MEDIA_Smartphone {
+
+        @media only screen and (max-width: $MEDIA_Smartphone_Width)  { @content; }
+
+    }
+}
+
+@mixin Transition($attr,$duration:.15s,$delay:0s,$ease:$EASE_BEZIER_Out) {
+
+    -webkit-transition: $attr $duration $ease $delay;
+    transition: $attr $duration $ease $delay;
+
+}

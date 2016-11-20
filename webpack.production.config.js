@@ -42,6 +42,9 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('production')
     })
   ],
+  resolve: {
+      extensions: ['', '.js', '.jsx', '.json']
+  },
   module: {
     loaders: [{
       test: /\.jsx?$/,
@@ -56,6 +59,12 @@ module.exports = {
     }, {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract('style','css!sass')
-    }]
+    },
+    { test: /\.svg$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=src/fonts/[name].[ext]' },
+    { test: /\.woff$/, loader: 'url?limit=65000&mimetype=application/font-woff&name=src/fonts/[name].[ext]' },
+    { test: /\.woff2$/, loader: 'url?limit=65000&mimetype=application/font-woff2&name=src/fonts/[name].[ext]' },
+    { test: /\.otf$/, loader: 'url?limit=65000&mimetype=application/octet-stream&name=src/fonts/[name].[ext]' },
+    { test: /\.eot$/, loader: 'url?limit=65000&mimetype=application/vnd.ms-fontobject&name=src/fonts/[name].[ext]' }
+    ]
   }
 };

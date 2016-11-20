@@ -1,0 +1,17 @@
+{
+  "project-name":"lin.bert-website",
+  "nav":[
+    {
+      "route":"/",
+      "label":"Work"
+    },
+    {
+      "route":"about",
+      "label":"About & Contact"
+    },
+    {
+      "route":"press",
+      "label":"Press"
+    }
+  ]
+}
