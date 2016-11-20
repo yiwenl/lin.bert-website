@@ -7,7 +7,8 @@ section#home {
     margin-bottom: 40px;
 
     @include MediaQuery($MEDIA_Tablet) {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
+      cursor: pointer;
     }
 
     &:after {
@@ -51,8 +52,9 @@ section#home {
 
       position: absolute;
       @include size(100%,100%);
-      @include Transition(border-width,.25s);
+      @include Transition(all,.25s);
       border: 1px solid $COLOR_WHITE;
+      background-color: rgba($COLOR_BLACK,.5);
 
     }
 
@@ -128,6 +130,7 @@ section#home {
 
         .border {
           border-width: 20px;
+          background-color: transparent;
         }
 
         p {

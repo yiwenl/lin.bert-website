@@ -4,6 +4,7 @@ nav {
 
   @include MediaQuery($MEDIA_Tablet) {
     display: table-cell !important;
+    vertical-align: middle;
   }
 
   ul {
@@ -25,7 +26,7 @@ nav {
           cursor: pointer;
         }
 
-        &:hover {
+        &.active,&:hover {
           color: $COLOR_PINK;
         }
 
