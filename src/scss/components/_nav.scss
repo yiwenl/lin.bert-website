@@ -1,5 +1,11 @@
 nav {
 
+  display: none !important;
+
+  @include MediaQuery($MEDIA_Tablet) {
+    display: table-cell !important;
+  }
+
   ul {
 
     margin: 0;

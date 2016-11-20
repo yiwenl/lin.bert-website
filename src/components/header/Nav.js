@@ -6,7 +6,7 @@ import ConfigJSON from '../config/Config';
 class Nav extends Component {
   render(){
     return(
-      <nav className="table-cell">
+      <nav>
         <ul>
           {ConfigJSON.nav.map((navItem) => {
             return(

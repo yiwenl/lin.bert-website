@@ -1,0 +1,144 @@
+section#home {
+
+  .project-item {
+
+    position: relative;
+    padding-bottom: 35%;
+    margin-bottom: 40px;
+
+    @include MediaQuery($MEDIA_Tablet) {
+      margin-bottom: 80px;
+    }
+
+    &:after {
+
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 60px;
+      top: 50%;
+      right: -5px;
+      @include transform(translateY(-50%));
+      @include Transition(height,.35s);
+      background-color: $COLOR_PINK;
+      z-index: 2;
+
+    }
+
+    .image-overflow {
+      position: absolute;
+      overflow: hidden;
+      @include size(100%,100%);
+    }
+
+    .image-holder {
+
+      position: absolute;
+      @include size(100%,100%);
+      @include Transition(all,.5s);
+      @include Scale(1);
+
+
+      background-size: cover;
+      cursor: pointer;
+
+      @include MediaQuery($MEDIA_Tablet) {
+        filter: grayscale(100%);
+      }
+    }
+
+    .border {
+
+      position: absolute;
+      @include size(100%,100%);
+      @include Transition(border-width,.25s);
+      border: 1px solid $COLOR_WHITE;
+
+    }
+
+    p {
+
+        &.title {
+
+          position: absolute;
+          top: 50%;
+          color: $COLOR_PINK;
+          font-family: $font_BD;
+          margin: 0;
+          line-height:0;
+
+          -webkit-transform-origin: center;
+          transform-origin: center;
+
+          @include font-size(40px);
+          @include Translate(-50%);
+
+          @include MediaQuery($MEDIA_Tablet) {
+            @include font-size(80px);
+          }
+
+
+          span {
+            position: relative;;
+            width: 100%;
+            display: block;
+            @include Rotate(-90deg);
+          }
+
+        }
+
+        &.caption {
+
+          position: absolute;
+          width: 100%;
+          left: 0;
+          bottom: -20px;
+          color: $COLOR_BLACK;
+          text-align: right;
+          line-height: 0;
+
+          @include font-size(14px);
+
+          @include MediaQuery($MEDIA_Tablet) {
+
+            bottom: -10px;
+            padding: 0 20px;
+            @include font-size(22px);
+            opacity: 0;
+            @include Translate(0,20px);
+            @include Transition(all,.25s,.12s);
+          }
+
+        }
+
+    }
+
+    @include MediaQuery($MEDIA_Tablet) {
+
+      &:hover {
+
+        &:after {
+          height: calc(100% - 40px);
+        }
+
+        .image-holder {
+          @include Scale(1.05);
+          filter: grayscale(0%);
+        }
+
+        .border {
+          border-width: 20px;
+        }
+
+        p {
+          &.caption {
+            opacity: 1;
+            @include Translate();
+          }
+        }
+      }
+    }
+
+  }
+
+}

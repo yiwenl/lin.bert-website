@@ -5,7 +5,7 @@ class Header extends Component {
 
   render(){
     return (
-      <header className="container">
+      <header className="container-fluid">
         <div className="row">
           <div className="column col-xs-6 text-left">
             <p className="title table-cell"><b>lin.bert</b></p>
