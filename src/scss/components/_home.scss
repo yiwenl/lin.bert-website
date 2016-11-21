@@ -1,5 +1,11 @@
 section#home {
 
+  padding: 0 20px;
+  
+  @include MediaQuery($MEDIA_Tablet) {
+    padding: 0 40px;
+  }
+
   .project-item {
 
     position: relative;
@@ -16,7 +22,7 @@ section#home {
       content: '';
       position: absolute;
       width: 10px;
-      height: 60px;
+      height: 30px;
       top: 50%;
       right: -5px;
       @include transform(translateY(-50%));
@@ -24,6 +30,9 @@ section#home {
       background-color: $COLOR_PINK;
       z-index: 2;
 
+      @include MediaQuery($MEDIA_Tablet) {
+        height: 60px;
+      }
     }
 
     .image-overflow {
@@ -72,7 +81,7 @@ section#home {
           -webkit-transform-origin: center;
           transform-origin: center;
 
-          @include font-size(40px);
+          @include font-size(36px);
           @include Translate(-50%);
 
           @include MediaQuery($MEDIA_Tablet) {
@@ -99,7 +108,7 @@ section#home {
           text-align: right;
           line-height: 0;
 
-          @include font-size(14px);
+          @include font-size(18px);
 
           @include MediaQuery($MEDIA_Tablet) {
 

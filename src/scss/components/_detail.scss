@@ -1,0 +1,17 @@
+section#detail {
+
+  margin-bottom: 40px;
+  
+  .media-holder {
+    position: relative;
+    padding-bottom: 36.25%;
+
+    video {
+      position: absolute;
+      background-size: cover;
+      background-position: 50% 50%;
+      @include size(100%,100%);
+    }
+
+  }
+}

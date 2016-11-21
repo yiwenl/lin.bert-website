@@ -25,7 +25,6 @@ html {
   #app {
     width: 100%;
     @include MediaQuery($MEDIA_Tablet) {
-      padding: 0 40px;
       max-width: 1440px;
       display: block;
       margin: 0 auto;
@@ -38,4 +37,5 @@ html {
 
 @import './components/header';
 @import './components/home';
+@import './components/detail';
 @import './components/footer';

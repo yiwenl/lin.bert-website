@@ -21,22 +21,31 @@
       "type":"digital installation",
       "main-image":"assets/projects/kuafu.jpg",
       "content":{
-        "row": {
-          "type":"2-columns",
-          "col-sx":{
-            "column-type":"paragraph",
-            "title":"kuafu",
-            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupta.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupta.",
-            "link": {
-              "label":"Link to the blog",
-              "href":"http://www.google.ch"
+        "main": {
+          "type":"video",
+          "url":"https://player.vimeo.com/video/88861435",
+          "poster":"assets/projects/kuafu.jpg"
+        },
+        "rows":[
+          {
+            "row": {
+              "type":"2-columns",
+              "col-sx":{
+                "column-type":"paragraph",
+                "title":"kuafu",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupta.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupta.",
+                "link": {
+                  "label":"Link to the blog",
+                  "href":"http://www.google.ch"
+                }
+              },
+              "col-dx":{
+                "column-type":"image",
+                "image":"assets/projects/kuafu-1.jpg"
+              }
             }
-          },
-          "col-dx":{
-            "column-type":"image",
-            "image":"assets/projects/kuafu-1.jpg"
           }
-        }
+        ]
       }
     },
     {
@@ -47,6 +56,10 @@
       "content":{
         "row": {
           "type":"2-columns",
+          "main": {
+            "type":"image",
+            "url":"88861435"
+          },
           "col-sx":{
             "column-type":"paragraph",
             "title":"kuafu",

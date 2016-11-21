@@ -15,21 +15,27 @@ class ProjectItem extends Component {
       backgroundImage: 'url(' + this.project['main-image'] + ')'
     };
 
+    let href = 'detail/' + this.project.route;
+
     return(
       <div className="project-item">
 
-        <div className="image-overflow">
-          <div className="image-holder" style={backgroundImageStyle} />
-          <div className="border" />
-        </div>
+        <Link to={href}>
 
-        <p className="title">
-          <span>{this.project.name}</span>
-        </p>
+          <div className="image-overflow">
+            <div className="image-holder" style={backgroundImageStyle} />
+            <div className="border" />
+          </div>
 
-        <p className="caption">
-          {this.project.type}
-        </p>
+          <p className="title">
+            <span>{this.project.name}</span>
+          </p>
+
+          <p className="caption">
+            {this.project.type}
+          </p>
+
+        </Link>
 
       </div>
     )
