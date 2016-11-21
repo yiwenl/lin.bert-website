@@ -7,10 +7,10 @@ class Header extends Component {
     return (
       <header className="container-fluid">
         <div className="row">
-          <div className="column col-xs-6 text-left">
+          <div className="column col-xs-4 col-sm-6 text-left">
             <p className="title table-cell"><b>lin.bert</b></p>
           </div>
-          <div className="column col-xs-6 text-right">
+          <div className="column col-xs-8 col-sm-6 text-right">
             <Nav />
           </div>
         </div>

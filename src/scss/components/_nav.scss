@@ -14,13 +14,18 @@ nav {
 
     li {
 
-      display: block;
+      display: inline-block;
+
+
+      @include MediaQuery($MEDIA_Tablet) {
+        display: block;
+        line-height: 30px;
+      }
 
       a {
 
         width: auto;
         @include Transition(color,.15s);
-        line-height: 30px;
 
         &:not(.disabled) {
           cursor: pointer;
