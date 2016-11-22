@@ -1,17 +1,69 @@
 section#detail {
 
-  margin-bottom: 40px;
-  
+  margin-bottom: 30px;
+
   .media-holder {
     position: relative;
     padding-bottom: 36.25%;
 
     video {
       position: absolute;
+      left: 0;
+      top: 0;
       background-size: cover;
       background-position: 50% 50%;
       @include size(100%,100%);
     }
 
   }
+
+  .content-holder {
+    padding: 0 30px;
+    @include MediaQuery($MEDIA_DesktopBase) {
+      padding: 0 15px;
+    }
+  }
+
+  .row {
+
+    @include MediaQuery($MEDIA_DesktopBase) {
+      margin: 40px 0;
+    }
+
+    .column {
+      padding: 10px 15px;
+      @include MediaQuery($MEDIA_DesktopBase) {
+        padding: 0px 15px;
+        &:not(.single) {
+          &:first-child { padding-left: 0 }
+          &:last-child { padding-right: 0 }
+        }
+        &.single {
+          padding: 0;
+        }
+      }
+    }
+
+    .text-holder {
+      h1 {
+        @include font-size(80);
+        margin: 0;
+        @include MediaQuery($MEDIA_DesktopBase) {
+          @include font-size(100);
+        }
+      }
+      h3 {
+        @include font-size(24);
+        font-family: $font_RG;
+        text-align: justify;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  img.media {
+      width: 100%;
+      height: auto;
+  }
+
 }

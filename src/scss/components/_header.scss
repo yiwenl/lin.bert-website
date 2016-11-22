@@ -4,7 +4,7 @@ $headerD: 160px;
 header {
 
   height: $headerM;
-  padding: 0 20px;
+  padding: 0 30px !important;
 
   .row,.column {
     height: $headerM;
@@ -36,7 +36,7 @@ header {
 
   @include MediaQuery($MEDIA_Tablet) {
 
-    padding: 0 40px;
+    padding: 0 15px !important;
     height: $headerD;
 
     .row,.column {
