@@ -21,7 +21,11 @@ html {
 
     font-size: $base-font-size;
     font-family: $font_RG;
-    //@include background-gradient($COLOR_WHITE,#eaeaea,vertical);
+    @include background-gradient($COLOR_WHITE,#eaeaea,vertical);
+
+    @include MediaQuery($MEDIA_Tablet) {
+      @include background-gradient($COLOR_WHITE,$COLOR_WHITE,vertical)
+    }
   }
 
   #app {

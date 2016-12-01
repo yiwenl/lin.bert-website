@@ -115,6 +115,8 @@ section#detail {
       line-height: 1;
 
       margin: 0;
+      margin-bottom: 10px;
+
       @include MediaQuery($MEDIA_DesktopBase) {
         @include font-size(100);
       }
