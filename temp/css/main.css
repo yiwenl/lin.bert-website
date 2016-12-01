@@ -10,6 +10,7 @@ html, body {
 	overflow:hidden;
 	position: static;
 	
+	background: #f69882;
 }
 
 
@@ -26,6 +27,7 @@ h1,h2,h3,h4,text,p {
 	font-family: sans-serif;
 	padding:0;
 	margin:0;
+	pointer-events: none;
 }
 
 
@@ -46,18 +48,43 @@ h1,h2,h3,h4,text,p {
 	width:100%;
 }
 
+.inner-container {
+	/*background: rgba(255, 255, 255, .5);*/
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .logo-linbert {
-	position: absolute;
-	z-index: 1;
-
-	width:50px;
-	height:50px;
-
-	background:url(../img/logoLinbert.png);
-	background-size: cover;
-
-	left:50%;
-	margin-left:-25px;
-	bottom:100px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/logoLinbert.png);
+    background-size: cover;
 }
+
+.message-title {
+	margin-top:20px;
+	margin-bottom:10px;
+
+}
+
+.message {
+	color:white;
+	font-size: 12px;
+	font-family: 'verdana';
+}
+
+.follow-instagram {
+	font-family: 'verdana';
+	color:white;
+	text-decoration: none;
+	font-size: 12px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom:20px;
+}
+
