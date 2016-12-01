@@ -5,7 +5,7 @@ class HomePage extends Component {
 
   render(){
     return(
-      <section id="home">
+      <section id="home" className="container">
         <ProjectList />
       </section>
     );

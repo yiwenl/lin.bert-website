@@ -5,6 +5,7 @@ import ConfigJSON from '../config/Config';
 
 class ProjectList extends Component {
   render(){
+    console.log(ConfigJSON.projects);
     return (
       <div>
         {ConfigJSON.projects.map((project) => {

@@ -7,6 +7,10 @@ const MEDIA_IMAGE = 'image';
 const COLUMN_TYPE_PARAGRAPH = 'paragraph';
 const COLUMN_TYPE_IMAGE = 'image';
 
+const slideWidth = 250;
+const horizontalMargin = 40;
+const itemWidth = slideWidth + horizontalMargin * 2;
+
 
 class ProjectDetail extends Component {
 
@@ -15,16 +19,47 @@ class ProjectDetail extends Component {
 
     this.route = this.props.params.name;
     this.project = this.getContent(this.route);
+
     this.content = this.project.content;
 
+    this.slide = this.slide.bind(this);
+    this.max = this.content.gallery.length - 1;
+
+    this.state = {
+      next: false,
+      prev: true,
+      current: 0
+    }
   }
 
   getContent(route){
 
-    for(let i=0; i<ConfigJSON.projects.length; i++) {
-      if(ConfigJSON.projects[i].route == route)
-        return ConfigJSON.projects[i];
-    }
+    let _project = null;
+
+    ConfigJSON.projects.map((project) => {
+      if(project.route == route) {
+        _project =  project;
+      }
+    });
+
+    return _project;
+
+  }
+
+  componentDidMount() {
+
+
+  }
+
+  slide(pos) {
+
+    let current = this.state.current + pos;
+
+    this.setState({next:false, prev: false});
+    if(current == this.max) { this.setState({next:true}); }
+    if(current == 0) { this.setState({prev:true}); }
+    this.setState({current: current});
+
   }
 
   getColumnContent(rowContent) {
@@ -52,47 +87,57 @@ class ProjectDetail extends Component {
   render(){
 
     let index = 0;
+    let keyGallery = 0;
+
+    let mediaBG = {
+      backgroundImage: 'url(' + this.content.main.poster + ')'
+    };
 
     return(
       <section id="detail">
-        <div className="media-holder">
-          {this.content.main.type == 'video' ? <Video poster={this.content.main.poster} /> : '' }
-        </div>
+        <div className="media-holder" style={mediaBG} />
         <div className="content-holder container">
-          {this.content.rows.map((rowOBJ) => {
+          <div className="row">
+            {this.content.info.map(info => {
+              console.log(info);
+                return(
+                    <div key={index++} className={'col-md-6 column c' + index}>
+                      <h1 ><strong dangerouslySetInnerHTML={{__html:info.title}}></strong></h1>
+                      <h3 dangerouslySetInnerHTML={{__html:info.description}}></h3>
+                      {info.links.map(link => {
+                        return(
+                          <a className="link" href={link.url} target="_blank" title={link.label}>{link.label}</a>
+                        );
+                      })}
+                    </div>
+                );
+            })}
 
-            let row = rowOBJ.row;
-            console.log(row);
-            if(row.length == 2) {
+          </div>
+          <div className={'gallery-holder container-fluid slide' + this.state.current}>
 
-              let contentL = this.getColumnContent(row[0].column);
-              let contentR = this.getColumnContent(row[1].column);
+            {this.content.gallery.map((galleryItem) => {
+
+              let style = {
+                backgroundImage: 'url(' + galleryItem + ')'
+              };
 
               return(
-                <div className="row" key={rowOBJ.row.type + '_' + index++}>
-                  <div className="column col-md-6">
-                    {contentL}
-                  </div>
-                  <div className="column col-md-6">
-                    {contentR}
+
+                <div className="gallery-item" ref={'gallery-item' +  keyGallery} key={keyGallery++} >
+                  <div className="table">
+                    <div className="table-cell" style={style}>
+
+                    </div>
                   </div>
                 </div>
               );
+            })}
 
-            } else {
+            <div className="arrow next" ref="next" onClick={this.slide.bind(this,1)} disabled={this.state.next} />
+            <div className="arrow prev" ref="prev" onClick={this.slide.bind(this,-1)} disabled={this.state.prev} />
 
-              let content = this.getColumnContent(row[0].column);
-
-              return(
-                <div className="row" key={rowOBJ.row.type + '_' + index++}>
-                  <div className="column single col-xs-12">
-                    {content}
-                  </div>
-                </div>
-              );
-            };
-
-          })}
+          </div>
         </div>
       </section>
     );
