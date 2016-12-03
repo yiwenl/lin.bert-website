@@ -14,6 +14,84 @@
       "label":"Press"
     }
   ],
+  "press":[
+    {
+      "name":"<b>Kuafu</b> Digital art Installation  — <b>Awwwards Conference</b> in London<br>February 2017",
+      "url":""
+    },
+    {
+      "name":"<b>SÙ</b> Interactive installation — <b>DDD2016</b> Milan Design Conference<br>October 2016",
+      "url":""
+    },
+    {
+      "name":"<b>SÙ</b> Interactive installation — International School of Geneva<br>April 2016",
+      "url":""
+    },
+    {
+      "name":"<b>SÙ</b> Interactive installation named Star Canvas — <b>B-Reel</b> 5th anniversary party<br>April 2014",
+      "url":""
+    },
+    {
+      "name":"<b>Dark Forest</b> Web Experiment  — Chrome Experiment<br>April 2014",
+      "url":""
+    },
+    {
+      "name":"<b>Kuafu</b> Digital art Installation  — Finalist at <b>Google devart</b><br>2013",
+      "url":""
+    },
+    {
+      "name":"<b>Particles Valley</b><br>Chrome Experiments",
+      "url":"https://www.chromeexperiments.com/experiment/particles-valley"
+    },
+    {
+      "name":"<b>Dark Forest</b><br>Chrome Experiments",
+      "url":"https://www.chromeexperiments.com/experiment/the-dark-forest"
+    },
+    {
+      "name":"<b>Blossom</b><br>Experiments",
+      "url":"https://www.chromeexperiments.com/experiment/blossom"
+    }
+
+  ],
+  "about":{
+    "poster":"assets/about/header.jpg",
+    "title":"About lin.bert",
+    "description":"Lin.bert is a creative collective, created by visual artists Lin Yi-Wen and Bertrand Carrara. Their interdisciplinary work combines art, design, sound and code to create digital experiences, with a strong focus on storytelling and playfulness.<br><br>Based in London and Geneva their work has been exhibited around Europe.",
+    "wen": {
+      "title":"Lin Yi-Wen",
+      "description":"Wen is a Creative Technologist during the  day and a digital artist at night. That’s when he is not looking after his two lovely kids. On the foreground of the digital exploration, he’s constantly experimenting and pushing boundaries.<br><br>Originally from Taiwan, he lives and works in London having previously lived in Paris for 5 years. Living abroad has definitely had a huge impact on Wen’s life. The cultural changes and the variety of talented people he has met and worked with continues to inspire his creative work. Wen’s eastern culture and background is one of his main sources of inspiration."
+    },
+    "bert": {
+      "title":"Bertrand Carrara",
+      "description":"Bert is an art-director and has worked in the digital field for more than a decade, mainly in London but also in New York and now in Geneva (@Buzzbrothers). <br><br> With a background in Art & Design he loves experimenting with every type of medium and mixing them together. He has found in the digital field a place where he can express his need to mix storytelling, illustration, motion and interaction. "
+    },
+    "friends":{
+      "title":"Friends & Collaborators",
+      "description":"Collaboration is at the heart of their work, every project having many contributors. They are lucky that their collaborations are always with friends.",
+      "list":[
+        {
+          "name":"Alex Jenkins",
+          "link":"http://www.alex-jenkins.co.uk"
+        },
+        {
+          "name":"Owen Hindley",
+          "link":"http://www.owenhindley.co.uk"
+        },
+        {
+          "name":"Viggo Mörc",
+          "link":"http://www.viggomorck.com"
+        },
+        {
+          "name":"Filippo Spiezia",
+          "link":"http://www.filippospiezia.com"
+        },
+        {
+          "name":"Clément Chenebault",
+          "link":"https://twitter.com/mad_clem"
+        }
+      ]
+    }
+  },
   "projects":[
     {
       "name":"kuafu",
@@ -41,7 +119,7 @@
           },
           {
             "title":"",
-            "description":"In 2013 we entered it into the <a href='https://devart.withgoogle.com/#/project/17570645' target='_blank'>Google Devart</a> competition and ended up as finalists. Needless to say we were very proud of this result and have always wanted to finish the project. Time has past but the desire to create it is still intact, and we are happy to announce that Kuafu will be shown for the first time at the Awwward 2017 London Conference as a VR experience. Follow us to see the progress.",
+            "description":"In 2013 we entered it into the <a href='https://devart.withgoogle.com/#/project/17570645' target='_blank'><span>Google Devart</span></a> competition and ended up as finalists. Needless to say we were very proud of this result and have always wanted to finish the project. Time has past but the desire to create it is still intact, and we are happy to announce that Kuafu will be shown for the first time at the Awwward 2017 London Conference as a VR experience. Follow us to see the progress.",
             "links": []
 
           }
@@ -101,7 +179,7 @@
       }
     },
     {
-      "name":"Dark Forest",
+      "name":"dark Forest",
       "route":"dark-forest",
       "type":"",
       "main-image":"assets/projects/dark-forest.jpg",
@@ -143,7 +221,7 @@
       }
     },
     {
-      "name":"Xmas 2016",
+      "name":"xmas 2016",
       "route":"xmas-xperiment-2016",
       "type":"",
       "main-image":"assets/projects/xmas-2016.jpg",
@@ -178,7 +256,7 @@
       }
     },
     {
-      "name":"Xmas 2014",
+      "name":"xmas 2014",
       "route":"xmas-xperiment-2014",
       "type":"",
       "main-image":"assets/projects/xmas-2014.jpg",
