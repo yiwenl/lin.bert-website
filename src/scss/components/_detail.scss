@@ -1,4 +1,4 @@
-section#detail {
+section#detail,section#about {
 
   margin-bottom: 30px;
 
@@ -11,35 +11,70 @@ section#detail {
     @include MediaQuery($MEDIA_DesktopBase) {
       padding-bottom: 36.25%;
     }
-
-    /*
-    video {
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-size: cover;
-      background-position: 50% 50%;
-      @include size(100%,100%);
-    }
-    */
-
   }
 
-  a {
-    text-decoration: underline;
+  a:not(.link) {
+
+    span {
+      border-bottom: 1px dotted #ccc;
+      @include Transition(color);
+    }
+
+    &:hover {
+      color: $COLOR_PINK;
+    }
+
   }
 
   a.link {
 
+      cursor: pointer;
       width: 100%;
       display: block;
       margin: 10px 0;
       @include font-size(24);
+      line-height: 20px;
       @include Transition(all,.25s);
+
+      span {
+        display: inline-block;
+        border-bottom: 3px solid $COLOR_PINK;
+      }
+
 
       &:hover {
         color: $COLOR_PINK;
       }
+
+      &.big {
+
+        margin: 20px 0;
+        
+        @include MediaQuery($MEDIA_DesktopBase) {
+          @include Translate(0,60px);
+        }
+
+        span {
+          font-size: 130%;
+        }
+      }
+  }
+
+  a.social {
+
+    display: inline-block;
+    @include font-size(32);
+    line-height: 20px;
+    margin: 10px 0;
+    @include Transition(all,.25s);
+
+    @include MediaQuery($MEDIA_DesktopBase) {
+      margin-left: 5px;
+    }
+
+    &:hover {
+      color: $COLOR_PINK;
+    }
   }
 
   .content-holder {
@@ -80,7 +115,7 @@ section#detail {
         }
       }
 
-      &.c2 {
+      &.c2:not(.full) {
 
         margin-bottom: 20px;
 
@@ -105,6 +140,20 @@ section#detail {
         }
       }
 
+      .col-xs-12.column {
+        margin: 0;
+        padding: 10px 0;
+      }
+
+      .no-margin {
+        margin: 0;
+        padding: 0;
+      }
+
+      .img-responsive {
+        margin: 10px 0;
+      }
+
     }
 
 
@@ -120,20 +169,27 @@ section#detail {
       @include MediaQuery($MEDIA_DesktopBase) {
         @include font-size(100);
       }
+
+      &.small {
+        @include font-size(60);
+        @include MediaQuery($MEDIA_DesktopBase) {
+          @include font-size(80);
+        }
+      }
     }
 
     h2 {
       margin: 10px 0;
 
       @include MediaQuery($MEDIA_DesktopBase) {
-        margin: 0 0 10px 0;
+        margin: 0 0 5px 0;
 
         &.top {
-          margin-top: 10px;
+          margin-top: 30px;
         }
       }
 
-      @include font-size(40);
+      @include font-size(24);
       font-family: $font_BD;
       line-height: 1.2;
       text-align: left;
@@ -143,8 +199,9 @@ section#detail {
       margin: 0;
       @include font-size(24);
       font-family: $font_RG;
+      font-weight: 100;
       text-align: justify;
-      line-height: 1.2;
+      line-height: 1.4;
     }
   }
 
@@ -307,5 +364,7 @@ section#detail {
     }
 
   }
+
+
 
 }

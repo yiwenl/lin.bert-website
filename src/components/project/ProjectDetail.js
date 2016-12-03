@@ -99,14 +99,22 @@ class ProjectDetail extends Component {
         <div className="content-holder container">
           <div className="row">
             {this.content.info.map(info => {
-              console.log(info);
                 return(
                     <div key={index++} className={'col-md-6 column c' + index}>
                       <h1 ><strong dangerouslySetInnerHTML={{__html:info.title}}></strong></h1>
                       <h3 dangerouslySetInnerHTML={{__html:info.description}}></h3>
                       {info.links.map(link => {
                         return(
-                          <a className="link" href={link.url} target="_blank" title={link.label}>{link.label}</a>
+                          <a
+                            className="link"
+                            key={link.url}
+                            href={link.url}
+                            target="_blank"
+                            title={link.label}>
+
+                            <span>{link.label}</span>
+
+                          </a>
                         );
                       })}
                     </div>
