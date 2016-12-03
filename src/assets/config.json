@@ -14,6 +14,45 @@
       "label":"Press"
     }
   ],
+  "press":[
+    {
+      "name":"<b>Kuafu</b> Digital art Installation  — <b>Awwwards Conference</b> in London<br>February 2017",
+      "url":""
+    },
+    {
+      "name":"<b>SÙ</b> Interactive installation — <b>DDD2016</b> Milan Design Conference<br>October 2016",
+      "url":""
+    },
+    {
+      "name":"<b>SÙ</b> Interactive installation — International School of Geneva<br>April 2016",
+      "url":""
+    },
+    {
+      "name":"<b>SÙ</b> Interactive installation named Star Canvas — <b>B-Reel</b> 5th anniversary party<br>April 2014",
+      "url":""
+    },
+    {
+      "name":"<b>Dark Forest</b> Web Experiment  — Chrome Experiment<br>April 2014",
+      "url":""
+    },
+    {
+      "name":"<b>Kuafu</b> Digital art Installation  — Finalist at <b>Google devart</b><br>2013",
+      "url":""
+    },
+    {
+      "name":"<b>Particles Valley</b><br>Chrome Experiments",
+      "url":"https://www.chromeexperiments.com/experiment/particles-valley"
+    },
+    {
+      "name":"<b>Dark Forest</b><br>Chrome Experiments",
+      "url":"https://www.chromeexperiments.com/experiment/the-dark-forest"
+    },
+    {
+      "name":"<b>Blossom</b><br>Experiments",
+      "url":"https://www.chromeexperiments.com/experiment/blossom"
+    }
+
+  ],
   "about":{
     "poster":"assets/about/header.jpg",
     "title":"About lin.bert",

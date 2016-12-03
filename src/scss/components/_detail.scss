@@ -1,4 +1,4 @@
-section#detail,section#about {
+section#detail,section#about,section#press {
 
   margin-bottom: 30px;
 
@@ -36,20 +36,31 @@ section#detail,section#about {
       line-height: 20px;
       @include Transition(all,.25s);
 
+
       span {
         display: inline-block;
         border-bottom: 3px solid $COLOR_PINK;
       }
 
+      &[disabled] {
+        cursor: default;
+        
+        span {
+          border: 0;
+        }
+      }
+
 
       &:hover {
+        &:not([disabled]){
         color: $COLOR_PINK;
+        }
       }
 
       &.big {
 
         margin: 20px 0;
-        
+
         @include MediaQuery($MEDIA_DesktopBase) {
           @include Translate(0,60px);
         }

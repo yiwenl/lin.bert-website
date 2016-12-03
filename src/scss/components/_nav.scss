@@ -1,6 +1,5 @@
 nav {
 
-  display: none !important;
 
   @include MediaQuery($MEDIA_Tablet) {
     display: table-cell !important;
@@ -11,13 +10,16 @@ nav {
 
     margin: 0;
     list-style: none;
+    text-align: right;
+    width: 100%;
 
     li {
 
       display: inline-block;
-
+      margin-left: 15px;
 
       @include MediaQuery($MEDIA_Tablet) {
+        margin-left: 0;
         display: block;
         line-height: 30px;
       }
