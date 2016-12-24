@@ -1,40 +1,26 @@
 import React, { Component } from 'react';
-import ConfigJSON from '../config/Config';
+import * as Config from '../actions/Config';
 
 class Press extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.press = ConfigJSON.press;
-  }
-
   render(){
+
+    let press = Config.getPress();
+    console.log(press);
+
     return(
-      <section id="press">
-        <div className="content-holder container">
-          <div class="row">
-            <h1><strong>Press</strong></h1>
-          {
-            this.press.map(press => {
-              return(
-                <a
-                  key={press.name}
-                  href={press.url}
-                  className="link"
-                  target="_blank"
-                  disabled={press.url.length == 0}>
-
-                  <span dangerouslySetInnerHTML={{__html:press.name}}></span>
-
-                </a>
-              )
-            })
-          }
-          </div>
-        </div>
-      </section>
-    );
+      <div id="press">
+      {
+        press.map((press,i) => {
+          return(
+            <div className="press-item" key={i}>
+              <p className="label" dangerouslySetInnerHTML={{__html:press.label}}/>
+              <p className="sub" dangerouslySetInnerHTML={{__html:press.sub}}/>
+            </div>
+          );
+        })
+      }
+      </div>
+    )
   }
 }
 

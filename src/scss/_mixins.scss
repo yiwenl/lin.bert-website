@@ -1,0 +1,87 @@
+$base-font-size:            16px;
+
+$MEDIA_Smartphone:          'smartphone';
+$MEDIA_Tablet:              'tablet';
+$MEDIA_DesktopBase:         'desktop-small';
+$MEDIA_DesktopWide:         'desktop-wide';
+
+$MEDIA_Smartphone_Width:    767px;
+$MEDIA_Tablet_Width:        768px;
+$MEDIA_DesktopBase_Width:   992px;
+$MEDIA_DesktopWide_Width:   1080px;
+
+$EASE_Ease:                 ease;
+$EASE_BEZIER_Out:           cubic-bezier(.19,.5,.46,.88);
+$EASE_BEZIER_InOut:         cubic-bezier(.77,0,.175,1);
+
+@mixin MediaQuery($media:$MEDIA_Tablet) {
+
+    @if $media == $MEDIA_Tablet {
+      @media only screen and (min-width: $MEDIA_Tablet_Width) { @content; }
+    } @else if $media == $MEDIA_DesktopBase {
+      @media only screen and (min-width: $MEDIA_DesktopBase_Width)  { @content; }
+    } @else if $media == $MEDIA_DesktopWide {
+      @media only screen and (min-width: $MEDIA_DesktopWide_Width)  { @content; }
+    } @else if $media == $MEDIA_Smartphone {
+      @media only screen and (max-width: $MEDIA_Smartphone_Width)  { @content; }
+    }
+}
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+@mixin font-size($size) {
+  @if unitless($size) {
+    $size: $size * 1px;
+  }
+  font-size: $size;
+  font-size: ($size / $base-font-size) * 1rem;
+}
+
+@mixin pos($l:0,$t:0) {
+  left: $l;
+  top: $t;
+}
+
+@mixin size($w:100%,$h:100%) {
+  width: $w;
+  height: $h;
+}
+
+@mixin center() {
+  left: 50%;
+  top: 50%;
+  @include translate(-50%,-50%);
+}
+
+@mixin translate($x:0,$y:0,$z:0) {
+  @include prefix(transform,translate3d($x,$y,$z),'webkit');
+}
+
+@mixin rotate($deg:0) {
+  @include prefix(transform,rotateZ($deg),'webkit');
+}
+
+@mixin keyframes($animation-name) {
+
+    @-webkit-keyframes #{$animation-name} { @content; }
+    @keyframes #{$animation-name} { @content; }
+}
+
+@mixin animation($name,$duration:.5s,$delay:0s,$fillmode:forwards,$ease:$EASE_BEZIER_Out) {
+
+    @include prefix(animation-name,$name,'webkit');
+    @include prefix(animation-duration,$duration,'webkit');
+    @include prefix(animation-fill-mode,$fillmode,'webkit');
+    @include prefix(animation-timing-function,$ease,'webkit');
+    @include prefix(animation-delay,$delay,'webkit');
+
+}
+
+@mixin transition($time: .25s, $delay:0s, $timing-function: $EASE_BEZIER_Out) {
+    @include prefix(transition, all $time $timing-function $delay, 'webkit');
+}

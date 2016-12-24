@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import Nav from './Nav';
 
 class Header extends Component {
-  render(){
-    return (
-      <header className="container">
-        <img id="logo" src="assets/logo.png" />
-        <div className="row">
-          <div className="column col-xs-12 col-md-4 col-sm-6 text-left">
-            <p className="title table-cell">
-              <Link to="/"><b>lin.bert</b></Link>
-            </p>
-          </div>
-          <div className="column col-xs-12 col-md-8 col-sm-6 text-right">
-            <Nav />
-          </div>
+  render() {
+    return(
+      <header>
+        <div id="logo">
+          <Link to="/"><img src="assets/logo.png" /></Link>
         </div>
+        <img id="icon" src="assets/icon.png" />
+        <nav>
+          <ul>
+            <li><Link className="link link--kukuri" to="/" data-letters="Works">Works</Link></li>
+            <li><Link className="link link--kukuri" to="about" data-letters="About & Contacts">About & Contacts</Link></li>
+            <li><Link className="link link--kukuri" to="press" data-letters="Press">Press</Link></li>
+          </ul>
+        </nav>
       </header>
     );
   }

@@ -1,156 +1,249 @@
-section#home {
+#home {
 
-  padding: 0 30px;
+  .project-holder {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 0px;
+    opacity: 0;
+    @include translate(0,40px);
 
-  @include MediaQuery($MEDIA_Tablet) {
-    padding: 0 15px !important;
+
+
+    @include MediaQuery($MEDIA_DesktopBase) {
+      margin-bottom: 80px;
+    }
+
+    @for $i from 1 to 10 {
+      &:nth-child(#{$i}) {
+        @include animation(projectItemShow,1.2s,#{($i * .1) + 's'});
+        @include prefix(animation-timing-function,$EASE_BEZIER_InOut,'webkit');
+      }
+    }
+
+    &.closed {
+      margin-bottom: 0px;
+    }
+
+    &[disabled] {
+      .project-item {
+        .header-holder {
+          cursor: default;
+          pointer-events: none;
+        }
+      }
+    }
+
   }
 
   .project-item {
 
-    position: relative;
-    padding-bottom: 35%;
-    margin-bottom: 40px;
+    max-height: 3000px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    @include transition(1.2s,0s,ease-in-out);
 
-    @include MediaQuery($MEDIA_Tablet) {
-      margin-bottom: 60px;
+
+    a.active {
       cursor: pointer;
+      pointer-events: none;
     }
 
-    &:after {
-
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 30px;
-      top: 50%;
-      right: -5px;
-      @include transform(translateY(-50%));
-      @include Transition(height,.35s);
-      background-color: $COLOR_PINK;
-      z-index: 2;
-
-      @include MediaQuery($MEDIA_Tablet) {
-        height: 60px;
-      }
-    }
-
-    .image-overflow {
-      position: absolute;
-      overflow: hidden;
-      @include size(100%,100%);
-    }
-
-    .image-holder {
-
-      position: absolute;
-      @include size(100%,100%);
-      @include Transition(all,.5s);
-      @include Scale(1);
-
-
-      background-size: cover;
+    .header-holder {
       cursor: pointer;
-
-      @include MediaQuery($MEDIA_Tablet) {
-        filter: grayscale(100%);
-      }
-    }
-
-    .border {
-
-      position: absolute;
-      @include size(100%,100%);
-      @include Transition(all,.25s);
-      border: 1px solid $COLOR_WHITE;
-      background-color: rgba($COLOR_BLACK,.5);
-
-    }
-
-    p {
-
-        &.title {
-
-          position: absolute;
-          top: 50%;
-          color: $COLOR_PINK;
-          font-family: $font_BD;
-          margin: 0;
-          line-height:0;
-
-          -webkit-transform-origin: center;
-          transform-origin: center;
-
-          @include font-size(36px);
-          @include Translate(-50%);
-
-          @include MediaQuery($MEDIA_Tablet) {
-            @include font-size(80px);
-          }
+      position: relative;
+      width: 100%;
+      height: 120px;
+      margin:  0 auto;
+      @include transition(.15s);
 
 
-          span {
-            position: relative;;
-            width: 100%;
-            display: block;
-            @include Rotate(-90deg);
-          }
 
+      &:after {
+        content: '';
+        position: absolute;
+        right: -4px;
+        top: 50%;
+        @include size(8px,30%);
+        @include translate(0,-50%);
+        @include transition();
+        background-color: $pink;
+        height: calc(100% - 20px);
+
+        @include MediaQuery($MEDIA_DesktopBase) {
+          @include size(8px,30%);
         }
 
-        &.caption {
+      }
 
-          position: absolute;
+      &.closed {
+        height: 0;
+      }
+
+      &[disabled] {
+
+        max-width: 100%;
+        width: 100%;
+        height: 120px;
+
+        img {
+
+          height: auto;
           width: 100%;
-          left: 0;
-          bottom: -20px;
-          color: $COLOR_BLACK;
-          text-align: right;
-          line-height: 0;
-
-          @include font-size(18px);
-
-          @include MediaQuery($MEDIA_Tablet) {
-
-            bottom: -10px;
-            padding: 0 20px;
-            @include font-size(22px);
-            opacity: 0;
-            @include Translate(0,20px);
-            @include Transition(all,.25s,.12s);
-          }
-
+          max-width: inherit !important;
+          max-height: inherit !important;
         }
 
-    }
-
-    @include MediaQuery($MEDIA_Tablet) {
-
-      &:hover {
-
-        &:after {
-          height: calc(100% - 40px);
-        }
-
-        .image-holder {
-          @include Scale(1.05);
-          filter: grayscale(0%);
+        @include MediaQuery($MEDIA_DesktopBase) {
+          height: 450px;
         }
 
         .border {
-          border-width: 20px;
-          background-color: transparent;
+          border-width: 0 !important;
         }
 
-        p {
-          &.caption {
-            opacity: 1;
-            @include Translate();
+        h1,h2 {
+          opacity: 0
+        }
+
+        &:after {
+          height: 0;
+        }
+
+        img {
+
+          @include MediaQuery($MEDIA_DesktopBase) {
+            -webkit-filter: saturate(1);
+            filter: saturate(1);
           }
         }
       }
+
+      @include MediaQuery($MEDIA_DesktopWide) {
+        max-width: $maxWidth;
+      }
+
+      @include MediaQuery($MEDIA_DesktopBase) {
+        height: 300px;
+      }
+
+      .border {
+        position: absolute;
+        @include pos();
+        @include size();
+        @include transition();
+        border: 10px solid $white;
+
+        @include MediaQuery($MEDIA_DesktopBase) {
+          border-width: 0;
+        }
+      }
+
+      h1 {
+
+        line-height: 0;
+        color: $pink;
+        position: absolute;
+        width: 0;
+        white-space: nowrap;
+        text-align: center;
+        font-family: $fontBD;
+        @include pos(8px,50%);
+        @include font-size(20px);
+        @include rotate(-90deg);
+        @include transition();
+        -webkit-transition-property: opacity;
+        transition-property: opacity;
+
+        @include MediaQuery($MEDIA_DesktopBase) {
+          @include font-size(48px);
+          @include pos(0px,50%);
+        }
+
+        span {
+          position: absolute;
+          display: block;
+          @include translate(-50%);
+
+        }
+
+      }
+
+      h2 {
+        position: absolute;
+        width: 100%;
+        right: 20px;
+        bottom: 0;
+        text-align: right;
+        opacity: 0;
+        font-family: $fontLT;
+        @include font-size(14px);
+        @include translate(0,100%);
+        @include transition(.25s,.25s);
+        -webkit-transition-property: opacity;
+        transition-property: opacity;
+      }
+
+      .bg {
+        position: absolute;
+        @include pos();
+        @include size();
+        overflow: hidden;
+        -webkit-transition-property: width, height;
+        transition-property: width, height;
+      }
+
+      img {
+
+        position: absolute;
+        //max-width: 400px;
+        //max-height: 280px;
+        width: 100%;
+        height: auto;
+
+        @include transition();
+
+
+        @include MediaQuery($MEDIA_DesktopBase) {
+          min-width: 100%;
+          min-height: 100%;
+          @include pos(50%,50%);
+          @include translate(-50%,-50%);
+          -webkit-filter: saturate(0);
+          filter: saturate(0);
+        }
+
+
+      }
+
+      @include MediaQuery($MEDIA_DesktopBase) {
+        &:hover {
+
+          &:after {
+            height: calc(100% - 40px);
+          }
+
+          .border {
+            border-width: 20px;
+          }
+
+          h2 {
+            opacity: 1;
+            @include translate(0,0);
+          }
+
+          img {
+            -webkit-filter: saturate(1);
+            filter: saturate(1);
+          }
+        }
+      }
+
     }
 
   }
+
+  @import './detail';
 
 }

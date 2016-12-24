@@ -1,14 +1,24 @@
 @font-face {
-    font-family: 'gt_walsheimbold';
-    src: url('../fonts/gtwalsheimbold-webfont.woff2') format('woff2'),
-         url('../fonts/gtwalsheimbold-webfont.woff') format('woff');
+    font-family: 'GTWalshLight';
+    src: url('../fonts/gtwalsheimlight-webfont.woff2') format('woff2'),
+         url('../fonts/gtwalsheimlight-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'gt_walsheimmedium';
+    font-family: 'GTWalshRegular';
+    src: url('../fonts/gtwalsheimregular-webfont.woff2') format('woff2'),
+         url('../fonts/gtwalsheimregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'GTWalshMedium';
     src: url('../fonts/gtwalsheimmedium-webfont.woff2') format('woff2'),
          url('../fonts/gtwalsheimmedium-webfont.woff') format('woff');
     font-weight: normal;
@@ -17,12 +27,11 @@
 }
 
 @font-face {
-    font-family: 'gt_walsheimregular';
-    src: url('../fonts/gtwalsheimregular-webfont.woff2') format('woff2'),
-         url('../fonts/gtwalsheimregular-webfont.woff') format('woff');
+    font-family: 'GTWalshBold';
+    src: url('../fonts/gtwalsheimbold-webfont.woff2') format('woff2'),
+         url('../fonts/gtwalsheimbold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 
 }
 
@@ -39,12 +48,12 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?9548633#fontello') format('svg');
+    src: url('../font/fontello.svg?45022735#fontello') format('svg');
   }
 }
 */
 
- [class^="icon-"]:before, [class*=" icon-"]:before {
+ [class^="icon-"]:before, [class*=" icon-"]:before,[class^="icon-"]:after, [class*=" icon-"]:after {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -79,13 +88,14 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-link:before { content: '\e800'; } /* '' */
+.icon-left-open:before { content: '\e800'; } /* '' */
+.icon-right-open:before { content: '\e801'; } /* '' */
+.icon-right-open-after:after { content: '\e801'; } /* '' */
+.icon-link:before { content: '\e802'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-twitter:before { content: '\f309'; } /* '' */
 .icon-facebook:before { content: '\f30c'; } /* '' */
 .icon-gplus:before { content: '\f30f'; } /* '' */
 .icon-pinterest:before { content: '\f312'; } /* '' */
-.icon-tumblr:before { content: '\f315'; } /* '' */
 .icon-linkedin:before { content: '\f318'; } /* '' */
-.icon-behance:before { content: '\f34e'; } /* '' */

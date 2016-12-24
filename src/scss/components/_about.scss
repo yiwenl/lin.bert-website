@@ -1,0 +1,141 @@
+#about {
+
+  margin-bottom: 40px;
+  @include animation(appear);
+
+  img {
+
+    display: block;
+    width: 100%;
+    height: auto;
+
+    &.portrait {
+      margin: 40px 0 0px 0;
+    }
+  }
+
+  #content {
+
+    display: block;
+    margin: 0 auto;
+
+    @include MediaQuery($MEDIA_DesktopWide) {
+      max-width: $maxWidth;
+    }
+  }
+
+  h1 {
+    font-family: $fontBD;
+    @include font-size(64px);
+    margin: 20px 0;
+
+    @include MediaQuery($MEDIA_DesktopBase) {
+      margin-top: 40px;
+    }
+
+    &.small {
+      @include font-size(48px);
+    }
+
+  }
+
+  p {
+
+    font-family: $fontLT;
+    @include font-size(15px);
+    line-height: 1.65;
+    text-align: justify;
+
+    a {
+      border-bottom: 1px solid $lightgray;
+    }
+
+  }
+
+  .contact {
+
+    margin: 20px 0;
+    text-align: center;
+    @include font-size(20px);
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .link {
+
+    &.site {
+
+        position: relative;
+        margin: 10px 0;
+        width: 100%;
+
+        .social-holder {
+          position: absolute;
+          right: 0;
+          top: 0;
+          line-height: 2;
+
+          a {
+
+            @include transition();
+
+            &:hover {
+              color: $pink;
+            }
+          }
+        }
+    }
+
+    display: block;
+
+    a {
+      display: inline-block;
+      line-height: 2;
+    }
+
+    span,a {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+  }
+
+  .column {
+
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+
+    @include MediaQuery($MEDIA_DesktopBase) {
+
+      width: 50%;
+      display: inline-block;
+
+      &.left {
+        padding-right: 15px;
+      }
+
+      &.right {
+        padding-left: 15px;
+      }
+
+    }
+
+    a {
+
+      &:hover {
+
+        span {
+          @include translate(10px,1px);
+        }
+
+      }
+    }
+
+
+  }
+
+
+}

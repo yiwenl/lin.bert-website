@@ -5,6 +5,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StatsPlugin = require('stats-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -13,7 +14,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist/'),
     filename: '[name]-[hash].min.js',
-    publicPath: '/'
+    publicPath: ''
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -22,6 +23,7 @@ module.exports = {
       inject: 'body',
       filename: 'index.html'
     }),
+    new CopyWebpackPlugin([{from:'src/assets', to:'assets'}]),
     new ExtractTextPlugin('[name]-[hash].min.css'),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
@@ -38,8 +40,8 @@ module.exports = {
       modules: false
     }),
     new webpack.DefinePlugin({
-      //'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-      'process.env.NODE_ENV': JSON.stringify('production')
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      //'process.env.NODE_ENV': JSON.stringify('production')
     })
   ],
   resolve: {

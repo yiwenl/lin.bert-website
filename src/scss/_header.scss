@@ -1,0 +1,86 @@
+header {
+
+    position: relative;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+
+    @include MediaQuery($MEDIA_DesktopWide) {
+      max-width: $maxWidth;
+    }
+
+    #icon {
+
+      display: none;
+      position: absolute;
+      @include center();
+      width: 50px;
+      height: auto;
+
+      @include MediaQuery($MEDIA_DesktopBase) {
+        display: block;
+      }
+    }
+
+    #logo {
+
+
+      position: relative;
+      display: block;
+      width: auto;
+      top: 50%;
+      @include translate(8px,-50%);
+
+
+
+      img {
+        position: relative;
+        width: auto;
+        height: 16px;
+      }
+
+      &:before {
+
+        content: '';
+        position: absolute;;
+        width: 35px;
+        height: 38px;
+        left: -8px;
+        top: 50%;
+        margin-top: -1px;
+        background-color: $pink;
+        @include translate(0,-50%);
+
+      }
+
+    }
+
+    nav {
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 100%;
+      text-align: right;
+      display: table;
+
+      @include MediaQuery($MEDIA_DesktopBase) {
+        width: 50%;
+      }
+
+      ul {
+        margin: 0;
+        list-style: none;
+        vertical-align: middle;
+        text-align: right;
+        @include font-size(15px);
+        line-height: 1.35;
+        display: table-cell;
+
+        li {
+          line-height: 1.5;
+        }
+      }
+    }
+}

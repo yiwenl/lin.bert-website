@@ -1,0 +1,21 @@
+#press {
+
+
+  display: block;
+  margin: 40px auto 40px auto;;
+  @include animation(appear);
+
+  @include MediaQuery($MEDIA_DesktopWide) {
+    max-width: $maxWidth;
+  }
+
+
+  .press-item {
+    margin-bottom: 20px;
+
+    span {
+      margin-left: -5px;
+    }
+  }
+
+}

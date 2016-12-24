@@ -1,0 +1,79 @@
+
+
+#loading {
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  @include size();
+  //@include animation(loadingBgColor,.25s);
+
+  &[disabled] {
+    //background-color: $lightgray;
+    @include animation(hide,1s,1s);
+  }
+
+
+  #canvas-holder {
+
+     position: absolute;
+     margin-top: -50px;
+     @include center();
+     @include size(100px,100px);
+
+
+     canvas {
+       position: absolute;
+       @include size();
+     }
+
+     #logo {
+
+       position: absolute;
+       bottom: -50px;
+       left: 50%;
+       margin-left: 25px;
+       width: 0px;
+       height: 70px;
+       @include translate(-70px,100%);
+       overflow: hidden;
+
+       img {
+         position: absolute;
+         top: 50%;
+         left: 10px;
+         @include size(90px,20px);
+         @include translate(0,-50%);
+       }
+
+       &:before {
+         content: '';
+         position: absolute;
+         left: -10px;
+         top: 50%;
+         width: 0;
+         height: 50px;
+         background-color: $pink;
+         z-index: -1;
+         @include translate(0,-50%);
+
+       }
+
+     }
+
+     &.anim {
+
+       #logo {
+
+         @include animation(revealLogo,1.85s,2.5s,forwards,$EASE_BEZIER_InOut);
+
+         &:before {
+
+           @include animation(revealLogoBr,1s,3.1s,forwards,$EASE_BEZIER_InOut);
+         }
+
+       }
+     }
+  }
+
+}

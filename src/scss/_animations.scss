@@ -1,0 +1,29 @@
+@include keyframes(revealLogo) {
+  0% {width: 0; opacity: 0}
+  100% {width: 160px; opacity: 1}
+}
+
+@include keyframes(revealLogoBr) {
+  0% {width: 0}
+  100% {width: 54px}
+}
+
+@include keyframes(loadingBgColor) {
+  0% {background-color: transparent}
+  100% {background-color: $lightgray}
+}
+
+@include keyframes(hide){
+  0% {opacity: 1; visibility: visible}
+  100% {opacity: 0; visibility: hidden}
+}
+
+@include keyframes(appear){
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@include keyframes(projectItemShow){
+  0% {opacity: 0; @include translate(0,20%)}
+  100% {opacity: 1; @include translate()}
+}
