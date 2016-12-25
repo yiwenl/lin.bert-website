@@ -90,6 +90,10 @@
           {
             "label":"View the blog",
             "href":"http://darkforest.bongiovi.tw/"
+          },
+          {
+            "label":"Watch the Video",
+            "href":"https://vimeo.com/138404180"
           }
         ],
         "images":["dark-forest-01","dark-forest-02","dark-forest-03","dark-forest-04","dark-forest-05","dark-forest-06","dark-forest-07"]
@@ -101,8 +105,8 @@
       "type":"chrome experiment",
       "image":"xmas-xperiment-2016",
       "content": {
-        "title":"xmas xperiment 2016",
-        "contentL":"We were very pleased to be invited once again to the Xmas Xperiment. For this edition we’ve decided to explore the visualisation of animals at night. Set in woods, the user can explore their surroundings and discover animals being created in space by a single flying light.<br />This project was created in collaboration with <a href=\"https://twitter.com/mad_clem\" target=\"_blank\" data-letters=\"Clément Chenebault\" class=\"link link--kukuri\">Clément Chenebault</a>.",
+        "title":"christmas experiments 2016",
+        "contentL":"We were very pleased to be invited once again to the Christmas Experiments. For this edition we’ve decided to explore the visualisation of animals at night. Set in woods, the user can explore their surroundings and discover animals being created in space by a single flying light.<br />This project was created in collaboration with <a href=\"https://twitter.com/mad_clem\" target=\"_blank\" data-letters=\"Clément Chenebault\" class=\"link link--kukuri\">Clément Chenebault</a>.",
         "contentR":"",
         "link":[
           {
@@ -119,8 +123,8 @@
       "type":"chrome experiment",
       "image":"xmas-xperiment-2014",
       "content": {
-        "title":"xmas xperiment 2014",
-        "contentL":"In 2014 we participated in the Xmas Xperiment in which users blew on gold dust to reveal illustrations.",
+        "title":"christmas experiments 2014",
+        "contentL":"In 2014 we participated in the Christmas Experiments in which users blew on gold dust to reveal illustrations.",
         "contentR":"",
         "link":[
           {
