@@ -39,8 +39,7 @@
     {"id":"xmas-2016-04","src":"assets/xmas-2016/xmas-2016-04.jpg"},
     {"id":"xmas-2014-01","src":"assets/xmas-2014/xmas-2014-01.jpg"},
     {"id":"xmas-2014-02","src":"assets/xmas-2014/xmas-2014-02.jpg"},
-    {"id":"xmas-2014-03","src":"assets/xmas-2014/xmas-2014-03.jpg"},
-    {"id":"xmas-2014-03","src":"assets/xmas-2014/xmas-2014-04.jpg"}
+    {"id":"xmas-2014-03","src":"assets/xmas-2014/xmas-2014-03.jpg"}
   ],
   "projects":[
     {
