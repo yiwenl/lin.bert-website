@@ -125,6 +125,10 @@
           {
             "label":"Experience it",
             "href":"http://christmasexperiments.com/2016/01/night-eye/"
+          },
+          {
+            "label":"Case study",
+            "href":"http://blog.bongiovi.tw/case-study-night-eye/"
           }
         ],
         "images":["xmas-2016-01,full","xmas-2016-02,full","xmas-2016-03,full","xmas-2016-04, full","xmas-2016-05, full","xmas-2016-06, full","xmas-2016-07, full","xmas-2016-08, full","xmas-2016-09, full","xmas-2016-10, full","xmas-2016-11, full","xmas-2016-12, full"]

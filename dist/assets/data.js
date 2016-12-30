@@ -124,7 +124,11 @@
         "link":[
           {
             "label":"Experience it",
-            "href":"http://christmasexperiments.com/2016/01/night-eye/"
+            "href":"http://www.bongiovi.tw/projects/christmas2014/"
+          },
+          {
+            "label":"View the blog",
+            "href":"http://blog.bongiovi.tw/blow-my-christmas-experiment-this-year/"
           }
         ],
         "images":["xmas-2016-01,full","xmas-2016-02,full","xmas-2016-03,full","xmas-2016-04, full","xmas-2016-05, full","xmas-2016-06, full","xmas-2016-07, full","xmas-2016-08, full","xmas-2016-09, full","xmas-2016-10, full","xmas-2016-11, full","xmas-2016-12, full"]
