@@ -19,12 +19,13 @@ class App extends Component {
   }
 
   componentWillMount() {
+    console.log('Get data');
     axios.get('./assets/data.js',{responseType: 'json'})
     .then(this.onDataLoaded);
   }
 
   onDataLoaded({data}) {
-
+    console.log('Data :', data);
     Config.Save(data);
     this.refs.loading.startLoading(Config.getManifest());
 
