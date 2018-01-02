@@ -68,6 +68,10 @@
           {
             "label":"Watch the Video",
             "href":"https://vimeo.com/191776687"
+          },
+          {
+            "label":"Prototype - River",
+            "href":"http://yiwenl.github.io/Sketches/exps/12/"
           }
         ],
         "images":["kuafu-01,full","kuafu-02","kuafu-03","kuafu-04","kuafu-05","kuafu-06,full"]
